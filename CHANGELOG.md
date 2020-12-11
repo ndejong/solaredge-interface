@@ -1,3 +1,8 @@
+## 0.2.0 (2020-12-12)
+
+* __general__
+    * **feature**: Hard fork 0.2.x release
+
 ## 0.1.5 (2020-12-12)
 
 * __general__

@@ -1,0 +1,6 @@
+release_date: '2020-12-12'
+changes:
+- type: feature
+  component: general
+  description: Hard fork 0.2.x release
+  fixes: []

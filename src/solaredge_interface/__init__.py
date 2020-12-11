@@ -3,7 +3,7 @@
 
 __title__ = "solaredge-interface"
 __author__ = "Nicholas de Jong <contact@nicholasdejong.com>"
-__version__ = '0.1.5'
+__version__ = '0.2.0'
 __license__ = "MIT"
 
 __env_api_key__ = 'SOLAREDGE_API_KEY'

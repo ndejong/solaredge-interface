@@ -1,0 +1,6 @@
+release_date: '2020-12-11'
+changes:
+- type: fix
+  component: general
+  description: Fixes some links in docs
+  fixes: []

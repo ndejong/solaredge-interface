@@ -1,0 +1,4 @@
+
+
+class SolarEdgeInterfaceException(Exception):
+    pass

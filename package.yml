@@ -1,0 +1,38 @@
+
+name: solaredge-interface
+version: 0.1.5
+author: Nicholas de Jong <contact@nicholasdejong.com>
+license: MIT
+description: The SolarEdge Interface provides both a command-line interface and a Python module interface to interact with the SolarEdge API service.
+url: https://solaredge-interface.readthedocs.io/
+
+typed: false
+
+entrypoints:
+  console_scripts:
+    - solaredge-interface = solaredge_interface.cli.entrypoints:solaredge_interface
+
+test-driver:
+  type: pytest
+
+requirements:
+  - python ^3.7  # Pandas does not currently install on 3.6
+  - click
+  - pandas
+  - requests
+  - pytz
+  - python-dateutil
+
+classifiers:
+  - "Environment :: Console"
+  - "Intended Audience :: Developers"
+  - "Intended Audience :: Information Technology"
+  - "Programming Language :: Python :: 3.7"
+  - "Programming Language :: Python :: 3.8"
+  - "License :: OSI Approved :: MIT License"
+
+keywords:
+  - "solar"
+  - "solaredge"
+  - "solaredge api"
+  - "solaredge interface"

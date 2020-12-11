@@ -1,0 +1,6 @@
+release_date: '2020-12-11'
+changes:
+- type: feature
+  component: general
+  description: Initial release version
+  fixes: []

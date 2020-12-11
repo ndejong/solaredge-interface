@@ -1,0 +1,113 @@
+
+#@ def base_url():
+#@    if env.READTHEDOCS:
+#@      return "https://solaredge-interface.readthedocs.io/en/" + env.READTHEDOCS_VERSION + "/"
+#@    else:
+#@      return None
+#@ end
+
+loaders:
+  - type: python
+    search_path: [../src]
+
+hooks:
+  pre-render:
+  - shut --cwd .. changelog -a --markdown > ../CHANGELOG.md
+
+processors:
+  - type: crossref
+  - type: filter
+    exclude_special: true
+    documented_only: true
+    exclude_private: true
+
+renderer:
+  type: hugo
+
+  markdown:
+    toc_maxdepth: 3
+    classdef_code_block: true
+    descriptive_class_title: false
+    signature_with_def: true
+    signature_with_decorators: false
+    signature_code_block: true
+    render_module_header: true
+    header_level_by_type:
+      Method: 3
+      Function: 3
+    source_linker:
+      type: github
+      repo: ndejong/solaredge-interface
+    source_format: '###### *[[view source]]({url})*'
+
+  config:
+    baseURL: #@ base_url()
+    title: SolarEdge Interface
+    theme: {clone_url: "https://github.com/alex-shpak/hugo-book.git"}
+
+  build_directory: docs/build
+  content_directory: content/docs # The "alex-shpak/hugo-book" theme only renders pages in "content/docs" into the nav.
+  default_preamble: {menu: main}
+
+  pages:
+
+    - title: Home
+      name: index
+      source: ../README.md
+      directory: '..'
+
+    - title: Command Line
+      preamble:
+        weight: 10
+      name: command-line
+      source: command-line.md
+      children:
+      - title: Usage
+        preamble:
+          weight: 10
+        source: command-line-usage.md
+      - title: Examples
+        preamble:
+          weight: 20
+        source: command-line-examples.md
+
+    - title: Python Modules
+      preamble:
+        weight: 20
+      name: python-modules
+      source: python-modules.md
+      children:
+      - title: SolarEdgeAPI
+        preamble:
+          weight: 25
+        contents:
+          - solaredge_interface.api.SolarEdgeAPI.*
+#      - title: helpers
+#        preamble:
+#          weight: 26
+#        contents:
+#          - solaredge_interface.helpers.*
+
+    - title: Project
+      preamble:
+        weight: 40
+      name: project
+      source: project.md
+
+    - title: Changelog
+      preamble:
+       weight: 50
+      name: changelog
+      source: ../CHANGELOG.md
+
+    - title: Development
+      preamble:
+        weight: 60
+      name: development
+      source: development.md
+
+    - title: License
+      preamble:
+        weight: 70
+      name: license
+      source: ../LICENSE

@@ -1,0 +1,7 @@
+release_date: '2020-12-12'
+changes:
+- type: fix
+  component: general
+  description: Bumps Python minimum to 3.7 to address Pandas minimum and prevents
+    tabelize_data from groking on missing column key
+  fixes: []

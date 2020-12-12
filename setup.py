@@ -32,7 +32,7 @@ setuptools.setup(
   long_description = long_description,
   long_description_content_type = 'text/markdown',
   url = 'https://solaredge-interface.readthedocs.io/',
-  license = 'MIT',
+  license = 'BSD2',
   packages = setuptools.find_packages('src', ['test', 'test.*', 'tests', 'tests.*', 'docs', 'docs.*']),
   package_dir = {'': 'src'},
   include_package_data = True,
@@ -48,6 +48,6 @@ setuptools.setup(
   },
   cmdclass = {},
   keywords = ['solar', 'solaredge', 'solaredge api', 'solaredge interface'],
-  classifiers = ['Environment :: Console', 'Intended Audience :: Developers', 'Intended Audience :: Information Technology', 'Programming Language :: Python :: 3.7', 'Programming Language :: Python :: 3.8', 'License :: OSI Approved :: MIT License'],
+  classifiers = ['Environment :: Console', 'Intended Audience :: Developers', 'Intended Audience :: Information Technology', 'Programming Language :: Python :: 3.7', 'Programming Language :: Python :: 3.8', 'License :: OSI Approved :: BSD License'],
   zip_safe = True,
 )

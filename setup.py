@@ -25,7 +25,7 @@ requirements = [
 
 setuptools.setup(
   name = 'solaredge-interface',
-  version = '0.3.0',
+  version = '0.3.1',
   author = 'Nicholas de Jong',
   author_email = 'contact@nicholasdejong.com',
   description = 'The SolarEdge Interface provides both a command-line interface and a Python module interface to interact with the SolarEdge API service.',

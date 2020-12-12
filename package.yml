@@ -1,6 +1,6 @@
 
 name: solaredge-interface
-version: 0.2.1
+version: 0.3.0
 author: Nicholas de Jong <contact@nicholasdejong.com>
 license: BSD2
 description: The SolarEdge Interface provides both a command-line interface and a Python module interface to interact with the SolarEdge API service.

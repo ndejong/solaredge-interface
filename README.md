@@ -3,7 +3,7 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/solaredge-interface.svg)](https://github.com/ndejong/solaredge-interface/)
 [![Build Status](https://api.travis-ci.org/ndejong/solaredge-interface.svg?branch=master)](https://travis-ci.org/ndejong/solaredge-interface/)
 [![Read the Docs](https://img.shields.io/readthedocs/solaredge-interface)](https://solaredge-interface.readthedocs.io)
-![PyPI license](https://img.shields.io/pypi/l/solaredge-interface.svg)
+![License](https://img.shields.io/github/license/ndejong/solaredge-interface.svg)
 
 The SolarEdge Interface provides both a command-line interface and a Python module interface to interact with 
 the SolarEdge API service.

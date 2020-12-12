@@ -3,7 +3,7 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/solaredge-interface.svg)](https://github.com/ndejong/solaredge-interface/)
 [![Build Status](https://api.travis-ci.org/ndejong/solaredge-interface.svg?branch=master)](https://travis-ci.org/ndejong/solaredge-interface/)
 ![Read the Docs](https://img.shields.io/readthedocs/solaredge-interface)
-![PyPI license](https://img.shields.io/pypi/l/solaredge-interface.svg)
+![License](https://img.shields.io/github/license/ndejong/solaredge-interface.svg)
 
 ## Project
 * Github - [github.com/ndejong/solaredge-interface](https://github.com/ndejong/solaredge-interface)

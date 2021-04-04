@@ -5,7 +5,7 @@
 [![Read the Docs](https://img.shields.io/readthedocs/solaredge-interface)](https://solaredge-interface.readthedocs.io)
 ![License](https://img.shields.io/github/license/ndejong/solaredge-interface.svg)
 
-The SolarEdge Interface provides both a command-line interface and a Python module interface to interact with 
+The SolarEdge Interface provides both a command-line interface, and a Python module interface to interact with 
 the SolarEdge API service.
 
 ## Features
@@ -90,4 +90,4 @@ re-worked and extended in a way that is not compatible with previous forks.
 * ReadTheDocs - [solaredge-interface.readthedocs.io](https://solaredge-interface.readthedocs.io)
 
 ---
-Copyright &copy; 2020 Nicholas de Jong
+Copyright &copy; 2021 Nicholas de Jong

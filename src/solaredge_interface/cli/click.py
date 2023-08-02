@@ -339,6 +339,22 @@ def get_site_meters(**kwargs):
         output_format=solaredge_cli_config.format
     )
 
+@solaredge_interface.command('site_sensors')
+@click.argument('site_id', required=False)
+@click.option('--start_time', help='Default 7 days ago, else format "YYYY-MM-DD hh:mm:ss"')
+@click.option('--end_time', help='Default now time, else format "YYYY-MM-DD hh:mm:ss"')
+def get_site_meters(**kwargs):
+    """
+    Returns a list of all the sensors in the site, and the device to which they are connected.
+    """
+    kwargs = arg_helper.site_id(kwargs, config=solaredge_cli_config)
+    kwargs = arg_helper.end_time(kwargs)
+    kwargs = arg_helper.start_time(kwargs, delta_time=-(3600*24*7))
+    format_output(
+        response=solaredge_api.get_site_sensors(**kwargs),
+        output_format=solaredge_cli_config.format
+    )
+
 
 @solaredge_interface.command('site_equipment_sensors')
 @click.argument('site_id', required=False)

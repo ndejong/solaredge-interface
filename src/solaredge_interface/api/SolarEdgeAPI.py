@@ -437,6 +437,23 @@ class SolarEdgeAPI:
             params['meters'] = meters
         return self.__response_wrapper(http_request(url, params), site_id=site_id)
 
+    def get_site_sensors(self, site_id, start_time, end_time):
+        """
+        Returns a list of all the sensors in the site, and the device to which they are connected.
+
+        _parameters_
+        * _site_id_ (int) required - The site identifier to retrieve data for.
+        * _start_time_ (str) required - must be in format YYYY-MM-DD hh:mm:ss
+        * _end_time_ (str) required - must be in format YYYY-MM-DD hh:mm:ss
+        """
+        url = url_join(BASEURL, "site", site_id, "sensors")
+        params = {
+            'api_key': self.api_key,
+            'startTime': start_time,
+            'endTime': end_time
+        }
+        return self.__response_wrapper(http_request(url, params), site_id=site_id)
+
     def get_site_equipment_sensors(self, site_id):
         """
         Returns a list of all the sensors in the site, and the device to which they are connected.
